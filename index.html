@@ -45,35 +45,68 @@
 <script>
  
 var input="";
-
-
+//Forming a digital input matrix
+var InputValue=[];
+var i=1;
+//Matrix formation of mathematical symbols
+var process=[]
+j=1
+var operation= [plus, minus, multiply, divide, percent,bracketLeft, bracketRight];
    function addToInput (inValue){
       var element = document.getElementById("input");
       
       var previous = document.getElementById("input").innerText
       
       document.getElementById("input").innerText = previous + inValue
-     input+=(inValue);
+
+    // input+=(inValue);
+     
       
-      console.log(input);
+      
+     // classify between numbers and arithmetic symbols
+    
+    if (inValue != plus & inValue != minus & inValue != multiply & inValue != divide & inValue != percent & inValue != bracketLeft & inValue != bracketRight ) {
+      input+=(inValue);
+      // Store a numeric value in an array
+       InputValue[i]= input;
+      console.log("input" + i+ "=" + InputValue[i]);
+   
+   console.log("i = "+i);
+   
+     }
+     else  {
+      // Store mathematical symbols in an array
+       process[j]= (inValue);
+      console.log ("process"+ j + "=" + process[j]);
+      input= ('')
+     i++;j
+     j++;
+     }}
+     // Equation formation
+     // for (k=1; k>=i; k++){
+      // for (l=1; l>=j; l++){
+       //  var Equastion+= InputValue[k]+ process[l];
+      }
+     }
+     
      
    
-   }
+   
    // The process of calculating the result
   var myButton= document.getElementById("buttonSum");
   myButton.addEventListener("click",result);
   function result(){ 
-   var Sum= eval(input);
-   console.log (Sum);
+   //var Sum= eval(input);
+   //console.log (Sum);
 // Print the result on the top of the screen
-confirm(Sum);
+//confirm(Sum);
    
   }
   // Message if there is an error in the equation
-  if (Error) { 
-   confirm("There is an error in the equation ")
-   
-  }
+ // if (Error) { 
+  // confirm("There is an error in the equation ")}
+ 
+ 
 
   number1=""; 
   var myButton= document.getElementById("button1");
@@ -151,7 +184,6 @@ confirm(Sum);
    addToInput(7);
   }
   
-
  
   var myButton=document.getElementById("button8");
   myButton.addEventListener("click",hello10);
@@ -183,10 +215,6 @@ confirm(Sum);
    
    //addToInput('');
    input= ('   ')  ; 
-    
-   
-
-  // <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
     
    
   }
