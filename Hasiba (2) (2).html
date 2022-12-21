@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hasiba</title>
+</head>
+<body>
+   <!-- Add a text box to the screen -->
+   <center> 
+        <!-- <label id="input"></label>  -->
+<input id="userinput" type="text">
+  <!-- Create a button and add the "hello" function -->
+  
+
+  
+   <br> <br>
+   <button id="buttonc"> c </button>
+   <button id="button("> ( </button>
+   <button id="button)"> ) </button> 
+   <button id="button/"> / </button>
+   <br> <br>
+<button id="button1"> 1 </button>
+<button id="button2"> 2 </button>
+<button id="button3"> 3 </button>
+<button id="button+"> + </button>
+<br> <br>
+<button id="button4"> 4 </button>
+<button id="button5"> 5 </button>
+<button id="button6"> 6 </button>
+<button id="button-"> - </button>
+<br><br>
+<button id="button7"> 7 </button>
+<button id="button8"> 8 </button>
+<button id="button9"> 9 </button>
+<button id="button*"> * </button>
+<br><br>
+
+<button id="button0"> 0 </button>
+<button id="button%"> % </button>
+<button id="button."> . </button>
+<button id="buttonSum" > = </button>
+  
+
+ </center>
+<script>
+ // COLIN: Store the output location
+var output = document.getElementById("input");
+var input="";
+var i;
+//Forming a digital input matrix
+var InputValue=[];
+//Matrix formation of mathematical symbols
+var process=[];
+ var j=1
+var operation= [plus, minus, multiply, divide, percent,bracketLeft, bracketRight];
+    
+  number1=""; 
+  var myButton= document.getElementById("button1");
+  myButton.addEventListener("click",hello);
+  function hello(){
+
+   // Find the input element
+
+var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 1 ;
+console.log(input.value);
+
+  }
+ 
+  var myButton=document.getElementById("button2");
+  myButton.addEventListener("click",hello2);
+  function hello2() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 2 ;
+console.log(input.value);
+  }
+  
+  var myButton=document.getElementById("button3");
+  myButton.addEventListener("click",hello3);
+  function hello3() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 3 ;
+console.log(input.value);
+  }
+  var plus= "+" ;
+  var myButton=document.getElementById("button+");
+  myButton.addEventListener("click",hello4);
+  function hello4() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += plus ;
+console.log(input.value);
+  }
+  
+  var myButton= document.getElementById("button4");
+  myButton.addEventListener("click",hello5);
+  function hello5(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 4 ;
+console.log(input.value);
+  }
+   
+  var myButton=document.getElementById("button5");
+  myButton.addEventListener("click",hello6);
+  function hello6() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 5 ;
+console.log(input.value);
+  }
+  
+  
+  var myButton=document.getElementById("button6");
+  myButton.addEventListener("click",hello7);
+  function hello7() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 6 ;
+console.log(input.value);
+  }
+  
+  var minus= "-" ;
+  var myButton=document.getElementById("button-");
+  myButton.addEventListener("click",hello8);
+  function hello8() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += minus;
+console.log(input.value);
+  }
+ 
+  document.write("<br>");
+  
+  var myButton= document.getElementById("button7");
+  myButton.addEventListener("click",hello9);
+  function hello9(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 7 ;
+console.log(input.value);
+  }
+  
+ 
+  var myButton=document.getElementById("button8");
+  myButton.addEventListener("click",hello10);
+  function hello10() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 8 ;
+console.log(input.value);
+  }
+  
+  
+  var myButton=document.getElementById("button9");
+  myButton.addEventListener("click",hello11);
+  function hello11() {
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 9 ;
+console.log(input.value);
+  }
+  
+  var multiply= "*" ;
+  var myButton=document.getElementById("button*");
+  myButton.addEventListener("click",hello12);
+  function hello12() {
+   
+
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += multiply ;
+console.log(input.value);
+  }
+  // Memory cleaning wizard
+  var myButton= document.getElementById("buttonc");
+  myButton.addEventListener("click",hello13);
+  function hello13(){
+   console.log(input.value);
+   input.value = (" "); 
+    inValue=(' ');
+    //process[1]=(' ');
+   
+    i=0;
+    j=1;
+    k=1
+    
+  }
+  var myButton= document.getElementById("button0");
+  myButton.addEventListener("click",hello14);
+  function hello14(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += 0 ;
+console.log(input.value);
+  }
+  var percent ="%"
+  var myButton= document.getElementById("button%");
+  myButton.addEventListener("click",hello15);
+  function hello15(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += percent ;
+console.log(input.value);
+  }
+  var bracketLeft = '(';
+  var myButton= document.getElementById("button(");
+  myButton.addEventListener("click",hello16);
+  function hello16(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += bracketLeft ;
+console.log(input.value);
+  }
+  var bracketRight = ")";
+  var myButton= document.getElementById("button)");
+  myButton.addEventListener("click",hello17);
+  function hello17(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += bracketRight ;
+console.log(input.value);
+  }
+
+  var divide ="/"
+  var myButton= document.getElementById("button/");
+  myButton.addEventListener("click",hello18);
+  function hello18(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += divide ;
+console.log(input.value);
+  }
+  var point ="."
+  var myButton= document.getElementById("button.");
+  myButton.addEventListener("click",hello19);
+  function hello19(){
+   
+   var input = document.getElementById("userinput");
+
+// Update the value of the input variable
+input.value += point ;
+console.log(input.value);
+  }
+
+  var Equation="";
+  var myButton= document.getElementById("buttonSum");
+  myButton.addEventListener("click",result);
+  function result(){ 
+   console.log(input.value);
+   // classify between numbers and arithmetic symbols
+  for (i= 0; input.value-1; i++){
+    if (input.value[i] != plus && input.value[i] != minus && input.value[i] != multiply && input.value[i] != divide && input.value[i] != percent && input.value[i] != bracketLeft && input.value[i] !== bracketRight ) {
+      input+= (input.value);
+      // Store a numeric value in an array
+       InputValue[j]= (input);
+      console.log("input" + j+ "=" + InputValue[j]);
+   
+        console.log("i = "+ i);
+      
+     }
+     
+     else  {
+      // Store mathematical symbols in an array
+       process[k]= (input.value);
+      console.log ("process"+ k + "=" + process[k]);
+      input= (" ");
+       k++;
+       j++;
+ 
+     }
+   }
+     
+    
+   // The process of calculating the result
+    
+   //var Sum= eval(input);
+   //console.log (Sum);
+   if (process[2] == plus || process[2] == minus || process[2] == divide || process[2] == multiply || process[2] == percent ) {
+      var Sum= (' ');
+      output.innerText= Sum;
+      process[2]=(" ");
+     
+      
+   }
+   // Equation formation
+  
+  else {   InputValue[1]= Number (InputValue[1]);
+     InputValue[2]= Number (InputValue[2]);
+     console.log("process"+ process[1]);
+     console.log(InputValue[1]);
+     console.log(InputValue[2]);
+  }
+// Print the result on the top of the screen
+
+if (process[1] == plus  ){
+var Sum= InputValue[1]+InputValue[2];
+confirm(Sum);
+output.innerText= Sum;
+}
+else if ( process[1] == minus ){
+   var Sum= InputValue[1]-InputValue[2];
+confirm(Sum);
+output.innerText= Sum;
+}
+else if ( process[1] == multiply ){
+   var Sum= InputValue[1]*InputValue[2];
+confirm(Sum);
+output.innerText= Sum;
+}
+else if ( process[1] == divide ){
+   var Sum= InputValue[1]/InputValue[2];
+confirm(Sum);
+output.innerText= Sum;
+}
+else if ( process[1] == percent ){
+   var Sum= InputValue[1]/100;
+confirm(Sum);
+output.innerText= Sum;
+}
+  }
+  
+
+
+   //   console.log (Equation);
+  
+  // Message if there is an error in the equation
+ 
+  // confirm("There is an error in the equation ")}
+ 
+
+  
+</script>
+</body>
+</html>
